@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace WMS.Application.DTOs.Allocation {
-  public record CreateAllocationDto {
+  public record CreateAnnouncmentDto {
     [Required] public int EmpId { get; init; }
     [Required] public int ProjectId { get; init; }
     [Required] public DateOnly AssignedOn { get; init; }
