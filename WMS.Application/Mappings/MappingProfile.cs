@@ -16,6 +16,10 @@ using WMS.Domain.Entities;
 namespace WMS.Application.Mappings {
   public class MappingProfile : Profile {
     public MappingProfile() {
+      // We do not need to manually add joins here,
+      // because we are adding them from 'includes' params
+      // Check WMS.Infrastructure/Repository.cs for implementation
+
       // EMPLOYEE
       CreateMap<Employee, EmployeeDto>()
         .ForMember(dest => dest.DepartmentName, opt => opt.MapFrom(src => src.Department.DepartmentName))
